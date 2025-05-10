@@ -30,8 +30,3 @@ gcc file_operations/read_write.c -o read_write
 🤝 Contributions
 
 Feel free to fork this repository, make improvements, or add new examples. Pull requests are welcome!
-
-📜 License
-This project is licensed under the MIT License.
-
-Would you like this README to also include a section for prerequisites or references to man pages and documentation?
