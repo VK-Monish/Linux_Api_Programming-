@@ -14,6 +14,12 @@ This repository contains examples and exercises demonstrating the use of Linux s
 - Thread programming using `pthreads`
 - Error handling and debugging tools
 
+## File I/O and Hardware Access
+- `file_io/mouse_reader.c`: Reads raw mouse events from `/dev/input/mice`
+- `file_io/battery_status.c`: Reads battery percentage from `/sys/class/...`
+- `file_io/keyboard_reader.c`: Reads keyboard input from `/dev/input/eventX`
+- `file_io/arg_parser.c`: Demonstrates command-line argument handling in C
+
 ## 🛠️ Setup & Compilation
 
 Ensure you have `gcc` installed:
