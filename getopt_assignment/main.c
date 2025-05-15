@@ -1,3 +1,33 @@
+/*
+ * File:    main.c
+ * Author:  Monish Kumar
+ *
+ * Description:
+ * This program provides command-line utilities similar to basic Linux commands.
+ * It supports changing file permissions and counting words in a file.
+ *
+ * Usage:
+ *   ./a.out [OPTION]...
+ *
+ * Options:
+ *   -c, --chmod=<mode>:<file>
+ *       Change file permissions using chmod (e.g., --chmod=755:file.txt)
+ *
+ *   -w, --wordcount=<file>
+ *       Count the number of words in the specified file
+ *
+ *   -h, --help
+ *       Display this help message
+ *
+ * Compilation:
+ *   gcc -o a.out main.c
+ *
+ * Notes:
+ * - File permissions for --chmod must be provided in octal format (e.g., 755).
+ * - This tool demonstrates command-line parsing using getopt_long and basic system calls like open, read, and chmod.
+ *
+ */
+
 #include "header.h"
 
 void help() 
