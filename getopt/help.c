@@ -1,3 +1,39 @@
+/*
+ * Program: getopt_long Help Option Demo
+ * Author: Monish Kumar
+ * Description:
+ *   This C program demonstrates the use of getopt_long() to handle 
+ *   long options in command-line arguments. Specifically, it implements 
+ *   a '--help' or '-h' option that displays a detailed usage/help message
+ *   similar to that found in GNU core utilities.
+ *
+ * Usage:
+ *   ./a.out --help
+ *   ./a.out -h
+ *
+ * Features:
+ *   - Supports the --help or -h flag to print a comprehensive guide
+ *     on simulated Linux command-line options and behavior.
+ *   - Includes descriptions for commonly used flags like --cat, --echo,
+ *     --mkdir, etc.
+ *   - Mimics the structure of 'ls --help' output from coreutils.
+ *
+ * Compilation:
+ *   gcc -o a.out your_file.c
+ *
+ * Example Output:
+ *   $ ./a.out --help
+ *   (Displays all option descriptions and usage format)
+ *
+ * Exit Codes:
+ *   - Returns 0 when successful.
+ *   - Returns -1 after printing help information (can be adjusted).
+ *
+ * Notes:
+ *   - Currently, only the help option is implemented.
+ *   - Designed for educational purposes to understand getopt_long().
+ */
+
 #include <stdio.h>
 #include <unistd.h>
 #include <getopt.h>
