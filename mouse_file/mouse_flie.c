@@ -15,7 +15,6 @@ Program Behavior:
 Requirements:
 - Linux system with input event device files (under /dev/input/).
 - Proper permissions to read from the device file (usually requires root or appropriate group).
-- C compiler (e.g., GCC).
 - `<linux/input.h>` header for input_event struct and event codes.
 
 How to Compile:
