@@ -1,3 +1,57 @@
+/*
+Program: getopt_long_demo.c
+
+Description:
+This program demonstrates the use of `getopt_long` to parse both short and long command-line options.
+
+---
+
+Functionality:
+- Supports the following options:
+  - `-h`, `--help`     → Displays usage instructions and exits.
+  - `-a`, `--append`   → Sets a flag indicating append mode.
+  - `-b`, `--bakspace` → Sets a flag indicating backspace mode.
+  - `-c <val>`, `--cat=<val>` → Takes a required argument (typically a filename or string).
+
+---
+
+Compilation:
+    gcc getopt_long_demo.c -o getopt_long
+
+Usage:
+    ./getopt_long [OPTIONS]
+
+Examples:
+    ./getopt_long --help  
+        → Displays help message.
+
+    ./getopt_long -a -b -c test.txt  
+        → Sets append and backspace flags, and sets cvalue to "test.txt".
+
+    ./getopt_long --append --bakspace --cat=example.txt  
+        → Same as above, using long options.
+
+Output Example:
+    a flag = 1  
+    b flag = 1  
+    c value = example.txt
+
+---
+
+Notes:
+- `getopt_long` parses long options using a `struct option[]`.
+- The last element of the option array must be all zeros to indicate the end.
+- The `optarg` global variable stores the value passed to options like `-c` or `--cat`.
+- The help function provides clear usage guidance.
+
+---
+
+Header References:
+- `<getopt.h>`: Required for `getopt_long` and `struct option`.
+- `<unistd.h>`: Provides access to the POSIX API, including `getopt`.
+- `<stdlib.h>` & `<stdio.h>`: For general utilities and I/O operations.
+*/
+
 #include <stdlib.h>
 #include <getopt.h>
 #include <unistd.h>
