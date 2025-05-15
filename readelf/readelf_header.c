@@ -1,3 +1,48 @@
+/*
+ELF Header Reader in C
+
+This program reads and displays key fields from the ELF (Executable and Linkable Format) header of a given binary file.
+
+---
+
+Program Behavior:
+- Opens a specified ELF file provided as a command-line argument.
+- Reads the ELF header (Elf64_Ehdr) from the file.
+- Prints the magic number and important ELF header fields like:
+  - OS/ABI
+  - ABI Version
+  - Type
+  - Machine architecture
+  - Entry point address
+  - Program headers offset
+  - Section headers offset
+  - Flags
+  - Sizes and counts of headers
+  - Section header string table index
+- Closes the file descriptor after reading.
+
+Requirements:
+- POSIX-compliant OS with ELF binaries (e.g., Linux).
+- C compiler (e.g., GCC).
+- ELF header definitions from `<elf.h>`.
+
+How to Compile:
+    gcc elf_header_reader.c -o elf_header_reader
+
+How to Run:
+    ./elf_header_reader /path/to/elf/binary
+
+Expected Output:
+- Displays hexadecimal magic number bytes.
+- Prints various ELF header metadata fields with their values.
+
+Notes:
+- The program assumes a 64-bit ELF binary.
+- No validation is performed to check if the file is a valid ELF file.
+- The program prints error if the file cannot be opened.
+- The offsets and sizes are in bytes.
+*/
+
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
