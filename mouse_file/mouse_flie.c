@@ -1,3 +1,39 @@
+/*
+Mouse Event Reader in C
+
+This program reads and interprets mouse events from a Linux input device file (e.g., /dev/input/event5).
+
+---
+
+Program Behavior:
+- Opens the specified input device file for reading mouse events.
+- Continuously reads input_event structures from the device.
+- Detects mouse button clicks (right, left, middle) based on event codes.
+- Detects mouse movement directions on the X and Y axes.
+- Prints corresponding messages to the terminal for each detected event.
+
+Requirements:
+- Linux system with input event device files (under /dev/input/).
+- Proper permissions to read from the device file (usually requires root or appropriate group).
+- C compiler (e.g., GCC).
+- `<linux/input.h>` header for input_event struct and event codes.
+
+How to Compile:
+    gcc mouse_event_reader.c -o mouse_event_reader
+
+How to Run:
+    sudo ./mouse_event_reader
+
+Notes:
+- Update the device file path ("/dev/input/event5") to match your mouse input device.
+- Program runs indefinitely; terminate manually (e.g., Ctrl+C).
+- Event codes 272, 273, 274 correspond to mouse buttons (right, left, middle).
+- Movement detection is based on event codes and value changes for X and Y axes.
+- Reading from input device requires appropriate permissions.
+- The program currently prints simple messages; it can be extended for more complex input handling.
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
