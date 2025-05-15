@@ -1,3 +1,42 @@
+/*
+Command Line Option Parser using getopt
+
+This program demonstrates how to use the `getopt` function in C to parse command-line options.
+
+---
+
+Functionality:
+- Accepts and processes the following command-line options:
+  - `-a`: sets the `aflag` to 1
+  - `-b`: sets the `bflag` to 1
+  - `-c <value>`: assigns the string following `-c` to the `cvalue` variable
+- Any additional non-option arguments are printed after parsing options.
+
+---
+
+Compilation:
+    gcc getopt_example.c -o getopt_example
+
+Usage:
+    ./getopt_example -a -b -c Hello argument1 argument2
+
+Example Output:
+    aflag = 1, bflag = 1, cvalue = Hello  
+    Non-option argument argument1  
+    Non-option argument argument2
+
+Explanation:
+- `getopt(argc, argv, "habc:")` processes options:
+  - `h`, `a`, and `b` are flags (no arguments expected).
+  - `c:` expects an argument (stored in `optarg`).
+- `optind` is the index of the first non-option argument after `getopt` completes.
+
+---
+
+Note:
+- This is a basic usage of `getopt`. For more advanced argument parsing (e.g., long options), consider using `getopt_long` (GNU extension).
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
