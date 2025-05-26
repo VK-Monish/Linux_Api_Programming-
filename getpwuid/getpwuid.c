@@ -1,3 +1,20 @@
+/*
+ * This program demonstrates how to use the getpwuid() function
+ * to retrieve and display user account information from the system's
+ * password database based on a given user ID (UID).
+ *
+ * Key points:
+ * - getpwuid(uid_t uid) returns a pointer to a passwd struct containing
+ *   details about the user with the specified UID.
+ * - The passwd struct includes username, password (usually "x" or "*"),
+ *   user ID, group ID, user info (gecos), home directory, and shell.
+ *
+ * In this example, the UID passed is 1, which corresponds to a system user.
+ * The program prints out the user's information fields.
+ *
+ * Note: Access to password information may be limited depending on system security.
+ */
+
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
